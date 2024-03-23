@@ -19,14 +19,14 @@
     <!-- 构造器注入 -->
     <bean id="userDao3" class="dao.UserDao">
         <constructor-arg type="int" value="10"/>
-        <constructor-arg name="address" value="huangshi"/>
-        <constructor-arg index="0" value="zka"/>
+        <constructor-arg name="address" value="Sakura mansion"/>
+        <constructor-arg index="0" value="Kokura Asahi"/>
     </bean>
     <!-- setter注入 -->
     <bean id="userDao4" class="dao.UserDao">
-        <property name="address" value="huangshi"/>
-        <property name="id" value="11"/>
-        <property name="name" value="zka"/>
+        <property name="address" value="Sakura mansion"/>
+        <property name="id" value="10086"/>
+        <property name="name" value="Kokura Asahi"/>
     </bean>
     <!-- 复杂类型注入 -->
     <bean id="complexDao" class="dao.ComplexDao">
