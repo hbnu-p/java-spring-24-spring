@@ -1,4 +1,4 @@
-package aop;
+package com.hbnu.aop;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
@@ -10,7 +10,7 @@ import java.util.Date;
 @Aspect
 public class LogTime {
 
-    @Before("aop.CommonPointcuts.inAop()")
+    @Before("com.hbnu.aop.CommonPointcuts.inAop()")
     public void printTime(){
         System.out.println("前置通知：被增强方法运行之前执行");
     }
@@ -27,12 +27,12 @@ public class LogTime {
         System.out.println("环绕通知：运行后执行的部分");
     }
 
-    @After("execution(* aop.UserService.addUser())")
+    @After("execution(* com.hbnu.aop.UserService.addUser())")
     public void after(){
         System.out.println("最终通知");
     }
 
-    @AfterThrowing("execution(* aop.UserService.addUser())")
+    @AfterThrowing("execution(* com.hbnu.aop.UserService.addUser())")
     public void afterThrow(){
         System.out.println("发生异常。。。");
     }

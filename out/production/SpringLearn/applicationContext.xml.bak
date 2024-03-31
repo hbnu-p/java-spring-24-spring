@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- <import resource="classpath:dao/dao.xml"></import> -->
+    <!-- <import resource="service/service.xml"/> -->
+
+    <!-- 构造器方法实例化bean -->
+    <bean id="userDao" class="dao.UserDao"></bean>
+
+    <!-- 静态工厂方法实例化bean -->
+    <bean id="userDao1" class="factory.UserStaticService" factory-method="createInstance"/>
+    <!-- 实例工厂方法实例化bean -->
+    <!-- 创建实例工厂 -->
+    <bean id="userInstanceFactory" class="factory.UserInstanceFactory"/>
+    <bean id="userDao2" factory-bean="userInstanceFactory" factory-method="createInstance"/>
+
+    <!-- 构造器注入 -->
+    <bean id="userDao3" class="dao.UserDao">
+        <constructor-arg type="int" value="10"/>
+        <constructor-arg name="address" value="Sakura mansion"/>
+        <constructor-arg index="0" value="Kokura Asahi"/>
+    </bean>
+    <!-- setter注入 -->
+    <bean id="userDao4" class="dao.UserDao">
+        <property name="address" value="Sakura mansion"/>
+        <property name="id" value="10086"/>
+        <property name="name" value="Kokura Asahi"/>
+    </bean>
+    <!-- 复杂类型注入 -->
+    <bean id="complexDao" class="dao.ComplexDao">
+        <property name="set">
+            <set>
+                <value>1</value>
+                <value>2</value>
+            </set>
+        </property>
+        <property name="list">
+            <list>
+                <value>hubei</value>
+                <value>huangshi</value>
+                <value>cihu</value>
+            </list>
+        </property>
+        <property name="map">
+            <map>
+                <entry key="1" value="1761111"></entry>
+                <entry key="2" value="17622222"></entry>
+            </map>
+        </property>
+    </bean>
+</beans>
