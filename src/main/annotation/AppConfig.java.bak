@@ -1,9 +1,0 @@
-package com.hbnu.annotation;
-
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-
-@Configuration // 注解配置类
-@ComponentScan(basePackages = "com.hbnu.annotation")
-public class AppConfig {
-}
