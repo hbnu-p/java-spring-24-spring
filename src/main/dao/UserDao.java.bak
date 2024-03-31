@@ -17,6 +17,8 @@ public class UserDao {
         this.accountDao = accountDao;
     }
 
+    public UserDao() {
+    }
     public UserDao(String name, String address, int id) {
         this.name = name;
         this.address = address;
@@ -30,19 +32,8 @@ public class UserDao {
                 ", address='" + address + '\'' +
                 ", id=" + id +
                 '}';
-
-    }
-    public UserDao(String name) {
-        this.name = name;
     }
 
-    public AccountDao getAccountDao() {
-        return accountDao;
-    }
-
-    public void setAccountDao(AccountDao accountDao) {
-        this.accountDao = accountDao;
-    }
     public UserDao() {
     }
 

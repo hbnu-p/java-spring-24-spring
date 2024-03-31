@@ -3,15 +3,20 @@
   <component name="FacetManager">
     <facet type="Spring" name="Spring">
       <configuration>
-        <fileset id="fileset" name="Dao" removed="false">
-          <file>file://$MODULE_DIR$/src/dao.xml</file>
-          <file>file://$MODULE_DIR$/src/service/service.xml</file>
-          <file>file://$MODULE_DIR$/src/applicationContext.xml</file>
-        </fileset>
         <fileset id="fileset2" name="ApplicationContext" removed="false">
           <file>file://$MODULE_DIR$/src/resource/applicationContext.xml</file>
           <file>file://$MODULE_DIR$/src/main/dao/dao.xml</file>
           <file>file://$MODULE_DIR$/src/main/service/service.xml</file>
+        </fileset>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/src/resource/annotation.xml</file>
+          <file>file://$MODULE_DIR$/src/resource/aop.xml</file>
+          <file>file://$MODULE_DIR$/src/resource/applicationContext.xml</file>
+          <file>file://$MODULE_DIR$/src/resource/dao.xml</file>
+          <file>file://$MODULE_DIR$/src/main/dao/dao.xml</file>
+          <file>file://$MODULE_DIR$/src/main/service/service.xml</file>
+          <file>file://$MODULE_DIR$/src/resource/service.xml</file>
+          <file>file://$MODULE_DIR$/src/main/annotation/AppConfig.java</file>
         </fileset>
       </configuration>
     </facet>

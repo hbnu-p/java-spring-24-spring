@@ -3,11 +3,9 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!-- 配置组件 -->
-<!--    <bean id="accountDao" class="dao.AccountDao">-->
-<!--        <property name="account" value="HBNU Account"></property>-->
-<!--    </bean>-->
-<!--    <bean id="itemDao" class="dao.ItemDao">-->
-<!--        <property name="item" value="Cat"/>-->
-<!--    </bean>-->
+    <bean id="petService" class="service.PetService">
+        <property name="itemDao" ref="itemDao"/>
+        <property name="accountDao" ref="accountDao"/>
+    </bean>
+
 </beans>

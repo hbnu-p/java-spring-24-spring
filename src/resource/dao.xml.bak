@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- 配置bean -->
+    <!-- id "标识组件
+     class 指定组件的类型 ，使用全称-->
+    <bean id="accountDao" class="com.hbnu.dao.AccountDao">
+        <property name="account" value="HBNU Pet Account"/>
+    </bean>
+
+    <bean id="itemDao" class="com.hbnu.dao.ItemDao">
+        <property name="item" value="Cat"></property>
+    </bean>
+
+</beans>

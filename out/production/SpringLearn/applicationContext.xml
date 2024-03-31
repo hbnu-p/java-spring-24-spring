@@ -3,11 +3,10 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!-- <import resource="classpath:dao/dao.xml"></import> -->
-    <!-- <import resource="service/service.xml"/> -->
-
+     <import resource="dao.xml"/>
+     <import resource="service/service.xml"/>
     <!-- 构造器方法实例化bean -->
-    <bean id="userDao" class="dao.UserDao"></bean>
+    <bean id="userDao" class="dao.UserDao"/>
 
     <!-- 静态工厂方法实例化bean -->
     <bean id="userDao1" class="factory.UserStaticService" factory-method="createInstance"/>
@@ -25,8 +24,8 @@
     <!-- setter注入 -->
     <bean id="userDao4" class="dao.UserDao">
         <property name="address" value="Sakura mansion"/>
-        <property name="id" value="11"/>
-        <property name="name" value="Kokura Asahi"/>
+        <property name="id" value="10086"/>
+        <property name="name" value="Sakurakouji Luna"/>
     </bean>
     <!-- 复杂类型注入 -->
     <bean id="complexDao" class="dao.ComplexDao">
@@ -45,8 +44,8 @@
         </property>
         <property name="map">
             <map>
-                <entry key="1" value="1761111"></entry>
-                <entry key="2" value="17622222"></entry>
+                <entry key="1" value="1761111"/>
+                <entry key="2" value="17622222"/>
             </map>
         </property>
     </bean>
