@@ -17,7 +17,7 @@ public class UserService {
         this.userDao = userDao;
     }
 
-    @Autowired
+//    @Autowired
     @Qualifier("userDao1")
     private UserDao userDao;
 
